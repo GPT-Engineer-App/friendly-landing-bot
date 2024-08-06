@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PhotoCollage from '../components/PhotoCollage';
 
 const Index = () => {
   const [showCursor, setShowCursor] = useState(true);
@@ -12,11 +13,17 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white p-4">
-      <div className="max-w-4xl w-full space-y-8">
-        <h1 className="text-6xl font-bold mb-4">Hey! I'm Eito.</h1>
-        <p className="text-3xl font-semibold mb-8">I'm building Hackbots at GatlingX{showCursor ? '|' : ' '}</p>
-        
+    <div className="min-h-screen bg-white">
+      <div className="h-screen flex flex-col items-center justify-center p-4">
+        <h1 className="text-8xl font-bold mb-4">Hey! I'm Eito.</h1>
+        <p className="text-4xl font-semibold">
+          I'm building Hackbots at GatlingX{showCursor ? '|' : ' '}
+        </p>
+      </div>
+
+      <PhotoCollage />
+
+      <div className="max-w-4xl mx-auto p-4 space-y-8">
         <p className="text-xl mb-6">
           Right now, I'm spending a lot of time thinking about how we can reshape
           media culture in ways that bring creators and their communities into
