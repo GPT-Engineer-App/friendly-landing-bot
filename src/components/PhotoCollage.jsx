@@ -21,11 +21,20 @@ const PhotoCollage = () => {
   return (
     <div className="overflow-hidden h-64 relative">
       <div ref={collageRef} className="flex space-x-4 absolute">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+        {[
+          'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
+          'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg',
+          'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg',
+          'https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg',
+          'https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg',
+          'https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg',
+          'https://images.pexels.com/photos/3184319/pexels-photo-3184319.jpeg',
+          'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg',
+        ].map((src, index) => (
           <img
-            key={num}
-            src={`https://source.unsplash.com/random/400x300?sig=${num}`}
-            alt={`Random image ${num}`}
+            key={index}
+            src={src}
+            alt={`Stock image ${index + 1}`}
             className="w-64 h-64 object-cover"
           />
         ))}
