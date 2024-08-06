@@ -24,23 +24,30 @@ const ScrollingGallery = () => {
     'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
   ];
 
-  const texts = [
+  const topTexts = [
     { text: 'probably readin', color: 'text-orange-500' },
     { text: 'ncing or', color: 'text-red-700' },
     { text: 'MIA', color: 'text-yellow-300' },
   ];
 
+  const bottomTexts = [
+    { text: 'creating', color: 'text-blue-500' },
+    { text: 'innovating', color: 'text-green-500' },
+    { text: 'exploring', color: 'text-purple-500' },
+  ];
+
   return (
     <div className="overflow-hidden h-screen relative">
       <div ref={galleryRef} className="flex whitespace-nowrap absolute top-0 left-0">
-        {texts.map((textItem, index) => (
+        {topTexts.map((textItem, index) => (
           <div key={index} className="inline-block">
             <div className={`text-9xl font-bold ${textItem.color}`}>{textItem.text}</div>
             <img
               src={images[index]}
               alt={`Gallery image ${index + 1}`}
-              className="w-screen h-[calc(100vh-12rem)] object-cover"
+              className="w-screen h-[calc(100vh-24rem)] object-cover"
             />
+            <div className={`text-9xl font-bold ${bottomTexts[index].color}`}>{bottomTexts[index].text}</div>
           </div>
         ))}
       </div>
