@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ScrollingGallery from '../components/ScrollingGallery';
+import { Linkedin, Twitter, Github } from 'lucide-react';
 
 const Index = () => {
   const [showCursor, setShowCursor] = useState(true);
@@ -52,6 +53,20 @@ const Index = () => {
           </p>
         </div>
       </div>
+
+      <footer className="bg-gray-100 py-8">
+        <div className="max-w-4xl mx-auto flex justify-center space-x-8">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+            <Linkedin size={24} />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-400">
+            <Twitter size={24} />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+            <Github size={24} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
